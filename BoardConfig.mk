@@ -1,16 +1,12 @@
-DEVICE_PATH := device/samsung/m12
+DEVICE_PATH := device/samsung/a13
 
 # Architecture
-TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := 
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := generic
-
-# 64 Bit
-TARGET_USES_64_BIT_BINDER := true
-TARGET_SUPPORTS_64_BIT_APPS := true
+TARGET_CPU_VARIANT_RUNTIME := cortex-a15
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -32,14 +28,14 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
 # Screen
-#TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 400
 TW_DEFAULT_BRIGHTNESS := 200
 TW_THEME := portrait_hdpi
-TW_FRAMERATE := 90
-TARGET_SCREEN_WIDTH := 720
-TARGET_SCREEN_HEIGHT := 1600
+TW_FRAMERATE := 60
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2408
 
 # Status Bar UI
 TW_STATUS_ICONS_ALIGN := center
@@ -48,7 +44,7 @@ TW_CUSTOM_CLOCK_POS := "300"
 TW_CUSTOM_BATTERY_POS := "750"
 
 # Version
-TW_DEVICE_VERSION := SavedByLight M12
+TW_DEVICE_VERSION := SavedByLight a13
 
 # Inherit from common tree
 include device/samsung/universal3830-common/BoardConfigCommon.mk

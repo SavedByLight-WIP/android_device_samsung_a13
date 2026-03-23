@@ -1,5 +1,5 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_m12.mk
+    $(LOCAL_DIR)/twrp_a13.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_m12-eng
+    twrp_a13-eng
